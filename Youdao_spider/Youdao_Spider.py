@@ -2,6 +2,7 @@ import time
 import json
 import hashlib
 import requests
+from
 from fake_useragent import UserAgent
 
 url = "http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule"
@@ -38,12 +39,17 @@ def main():
     }
 
     response = requests.post(url, data=data, headers=headers)
-    if response.status_code == 200:
-        text_json = json.loads(response.text)
-        word = text_json.get('translateResult')[0][0].get('tgt')
-        print("翻译结果：", word)
-    else:
-        print("请求出错")
+    try:
+        try:
+            if response.status_code == 200:
+                text_json = json.loads(response.text)
+                word = text_json.get('translateResult')[0][0].get('tgt')
+                print("翻译结果：", word)
+        except requests.exceptions.ConnectionError:
+            print("请求出错")
+    except Exception as e:
+        print(e)
+
 
 if __name__ == '__main__':
     print('【INFO】：输入需要翻译的文本, 输入exit退出翻译')
