@@ -13,7 +13,7 @@
 
 ### 项目2：[Request_linkedin](https://github.com/Mrrrrr10/Request_Spider/blob/master/Linkedin_Spider/Linkedin_Spider.py)
 * **需求**：按照输入的公司名称，爬取该公司Linkedin员工详细信息
-* **说明**：这个项目是copy别人的，我只是看到这个博主的爬虫思想很nice，所以搬运过来记录一下，并且做了小修改，改成python3版本，具体思路可以参看[这个blog]("https://blog.csdn.net/Bone_ACE/article/details/71055153"])
+* **说明**：这个项目是copy别人的，我只是看到这个博主的爬虫思想很nice，所以搬运过来记录一下，并且做了小修改，改成python3版本，具体思路可以参看[这个blog](https://blog.csdn.net/Bone_ACE/article/details/71055153)
 
 ### 项目3：[Request_Youdao](https://github.com/Mrrrrr10/Request_Spider/blob/master/Youdao_spider/Youdao_Spider.py)
 * **需求**：输入文本信息，借助有道翻译的api接口返回翻译后的文本
