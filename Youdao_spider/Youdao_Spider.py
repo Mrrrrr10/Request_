@@ -2,7 +2,6 @@ import time
 import json
 import hashlib
 import requests
-from
 from fake_useragent import UserAgent
 
 url = "http://fanyi.youdao.com/translate?smartresult=dict&smartresult=rule"
