@@ -17,4 +17,4 @@
 
 ### 项目3：[Request_Youdao](https://github.com/Mrrrrr10/Request_Spider/blob/master/Youdao_spider/Youdao_Spider.py)
 * **需求**：输入文本信息，借助有道翻译的api接口返回翻译后的文本
-* **说明**：由于有道翻译做了反爬虫机制，有一个sign参数和salt参数需要post过去，但是这两个参数是加密的，所以F12全局搜索sign，发现salt参数是13位的时间戳，sign是sign: n.md5("fanyideskweb" + e + t + "6x(ZHw]mwzX#u0V7@yfwK")，这种sign加密比较好破解，因为是md5加密，python有对应的库可以轻松搞定，下面就放一张js加密sign参数的加密代码：![sign加密](https://github.com/Mrrrrr10/Request_Spider/blob/master/Youdao_spider/sign.png)
+* **说明**：最近在学js(爬虫好苦逼，啥都要学(捂脸)，没办法，遇到js加密的参数就得破解，于是找来个比较容易上手的网站——有道翻译来练练手)由于有道翻译做了反爬虫机制，有一个sign参数和salt参数需要post过去，但是这两个参数是加密的，所以F12全局搜索sign，发现salt参数是13位的时间戳，sign是sign: n.md5("fanyideskweb" + e + t + "6x(ZHw]mwzX#u0V7@yfwK")，这种sign加密比较好破解，因为是md5加密，python有对应的库可以轻松搞定，下面就放一张js加密sign参数的加密代码：![sign加密](https://github.com/Mrrrrr10/Request_Spider/blob/master/Youdao_spider/sign.png)
